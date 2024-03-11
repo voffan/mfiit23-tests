@@ -6,7 +6,7 @@ from deepdiff import DeepDiff
 @ddt
 class TestF(unittest.TestCase):
 
-    @data([12, {2:2, 3:2}], [2, {2:1}])
+    @data([12, {2:2, 3:1}], [2, {2:1}])
     @unpack
     def test_f1(self, value, exp_result):
         result = factor.factor(value)
